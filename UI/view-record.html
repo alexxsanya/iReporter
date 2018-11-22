@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>View Record : i-Reporter</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=".\static\css\layout.css">           
+    </head>
+    <body> 
+        <div class="header">
+          <image class="logo"></image>
+          <h1>i-Reporter</h1>
+          <!-- p>You see it, You report it here...</p -->
+        </div>
+        
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="create-record.html"> Report</a>
+            <a href="profile.html">My Profile</a>
+            <a href="signup.html" style="float:right">Register</a>
+            <a href="signin.html" style="float:right">Login</a>
+        </div>
+        
+        <div class="row">
+          <div class="leftcolumn">
+            <div class="card">
+                <!-- >h2><span class="incident-rf">RED FLAG</span> - Corrupt CAO in Wakiso District</h2 -->
+                <h2><span class="incident-rf">INTERVENTION</span> - Corrupt CAO in Wakiso District</h2>
+                <p>Below is the detailed information about this incident</p>
+                <hr /><br/>
+            </div>
+            <div class="card">
+                    <h3>Incident Images</h3>
+                    <div class="row">
+                            <div class="column">Image 1</div>
+                            <div class="column">Image 2</div>
+                            <div class="column">Image 3</div>                        
+                            <div class="column">Image 4</div>
+                            <div class="column">Image 5</div>
+                    </div> 
+                  </div>
+          </div>
+          <div class="rightcolumn">
+            <div class="card"> 
+                <div class="card">
+                    <h4>Location of Incident</h4>
+                    <div class="incident-map">
+                        <div class="fakeimg" style="height:200px;">Geo Map</div>
+                    </div>
+                </div>                 
+                <div class="card">
+                    <h4>Action</h4>
+                    <a href="#"><input type="button" value="EDIT"/></a> 
+                    <a href="#"><input type="button" value="DELETE"/></a> 
+
+                </div> 
+            </div>  
+          </div>
+        </div>
+        
+        <div class="footer">
+          <h2>Footer</h2>
+        </div>
+        
+    </body>
+</html>
+<script src="./static/js/ireporter.js"></script>
+<script>
+    function filterThisTable(){
+        firstColumn = 1
+        filterTable("myIncidentsTable","filterInput",firstColumn)
+    }
+</script>
+        
