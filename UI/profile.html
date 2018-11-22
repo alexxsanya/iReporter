@@ -16,7 +16,7 @@
         <div class="topnav">
             <a href="index.html">Home</a>
             <a href="create-record.html"> Report</a>
-            <a href="profile.html">My Records</a>
+            <a href="profile.html">My Profile</a>
             <a href="signup.html" style="float:right">Register</a>
             <a href="signin.html" style="float:right">Login</a>
         </div>
@@ -24,11 +24,11 @@
         <div class="row">
           <div class="leftcolumn">
             <div class="card">
-                <h2>REPORT AN INCIDENT HERE</h2>
-                <p>Complete the form appropriately to report an incident</p>
+                <h2>REPORTED INCIDENTS</h2>
+                <p>Below is a list of the reported incidents to ireport</p>
                 <hr /><br/>
                 <div class="table-display">
-                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                    <input type="text" id="filterInput" onkeyup="myFunction()" placeholder="Search for names..">
                     <table id="myIncidentsTable">
                         <tr>
                           <th>Created On</th>
@@ -37,30 +37,40 @@
                           <th>Status</th>
                         </tr>
                         <tr>
-                          <td>Peter</td>
-                          <td>Griffin</td>
-                          <td>$100</td>
+                          <td>12-11-2018</td>
+                          <td><a href="#">Corrupt CAO in Wakiso District</a></td>
+                          <td>Red Flag</td>
                           <td>Resolved</td>
                         </tr>
                         <tr>
-                          <td>Lois</td>
-                          <td>Griffin</td>
-                          <td>$150</td>
+                          <td>19-11-2018</td>
+                          <td>Deadly road pothole</td>
+                          <td>Intervention</td>
                           <td>Draft</td>
                         </tr>
                         <tr>
-                          <td>Joe</td>
-                          <td>Swanson</td>
-                          <td>$300</td>
+                          <td>22-11-2018</td>
+                          <td>Fallen Electirical Poles</td>
+                          <td>Intervention</td>
                           <td>Rejected</td>
                         </tr>
                         <tr>
-                          <td>Cleveland</td>
-                          <td>Brown</td>
-                          <td>$250</td>
+                          <td>23-11-2018</td>
+                          <td>Corrupt Forest Officer</td>
+                          <td>Intervention</td>
                           <td>Investigation</td>
                         </tr>
                     </table>
+                    <div class="center">
+                        <div class="pagination">
+                          <a href="#">&laquo;</a>
+                          <a href="#">1</a>
+                          <a href="#" class="active">2</a>
+                          <a href="#">3</a>
+                          <a href="#">4</a>
+                          <a href="#">&raquo;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
           </div>
@@ -91,27 +101,10 @@
         
     </body>
 </html>
-
+<script src="./static/js/ireporter.js"></script>
 <script>
-        function myFunction() {
-          // Declare variables 
-          var input, filter, table, tr, td, i;
-          input = document.getElementById("myInput");
-          filter = input.value.toUpperCase();
-          table = document.getElementById("myIncidentsTable");
-          tr = table.getElementsByTagName("tr");
-        
-          // Loop through all table rows, and hide those who don't match the search query
-          for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[0];
-            if (td) {
-              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-              } else {
-                tr[i].style.display = "none";
-              }
-            } 
-          }
-        }
+    function filterThisTable(){
+        filterTable("myIncidentsTable","filterInput")
+    }
 </script>
         
