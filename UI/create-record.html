@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>i-Reporter</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=".\static\css\layout.css">           
+    </head>
+    <body> 
+        <div class="header">
+          <image class="logo"></image>
+          <h1>i-Reporter</h1>
+          <!-- p>You see it, You report it here...</p -->
+        </div>
+        
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="create-record.html"> Report</a>
+            <a href="profile.html">My Records</a>
+            <a href="signup.html" style="float:right">Register</a>
+            <a href="signin.html" style="float:right">Login</a>
+        </div>
+        
+        <div class="row">
+          <div class="leftcolumn">
+            <div class="card">
+              <div class="form-card">
+                    <h2>REPORT AN INCIDENT HERE</h2>
+                    <p>Complete the form appropriately to report an incident</p>
+                    <hr /><br/>
+                    <form action="" class="test">
+                        <label for="incidentType">Incident Type</label>
+                        <select id="incidentType" name="incidentType" autofocus>
+                            <option></option>
+                            <option value="redflag">Red Flag</option>
+                            <option value="Intervention">Intervention</option> 
+                        </select>
+                        
+                        <label for="commentArea">Add a Comment</label>
+                        <textarea name="commentArea">Type Your Comment Here... </textarea>
+
+                        <label for="geoCode">Geolocation Codes</label>
+                        <input type="text" id="geoCode" name="geoCode" placeholder="Latitude, Longitude" disabled>
+                        <a href="#"><input type="button" value="PICK CODES" /></a> <br/><br>
+
+                        <label for="attachImage">Attach Image</label>
+                        <input type="file" id="attachImage" name="attachImage" placeholder="Attach Images.."/>
+                        
+                        <a href="#"><input class="full" type="button" value="REGISTER"/></a>                       
+                    </form>
+                    </div>
+             </div>
+          </div>
+          <div class="rightcolumn">
+            <div class="card">
+              <h2>VIEW MY INCIDENTS</h2>
+              <a href="profile.html"><input type="button" value="MY REPORTED INCIDENTS"/></a>   
+            </div>  
+          </div>
+        </div>
+        
+        <div class="footer">
+          <h2>Footer</h2>
+        </div>
+        
+        </body>
+        </html>
+        

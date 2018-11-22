@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Profile : i-Reporter</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=".\static\css\layout.css">           
+    </head>
+    <body> 
+        <div class="header">
+          <image class="logo"></image>
+          <h1>i-Reporter</h1>
+          <!-- p>You see it, You report it here...</p -->
+        </div>
+        
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="create-record.html"> Report</a>
+            <a href="profile.html">My Records</a>
+            <a href="signup.html" style="float:right">Register</a>
+            <a href="signin.html" style="float:right">Login</a>
+        </div>
+        
+        <div class="row">
+          <div class="leftcolumn">
+            <div class="card">
+                <h2>REPORT AN INCIDENT HERE</h2>
+                <p>Complete the form appropriately to report an incident</p>
+                <hr /><br/>
+                <div class="table-display">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                    <table id="myIncidentsTable">
+                        <tr>
+                          <th>Created On</th>
+                          <th>Comment</th>
+                          <th>Type</th>
+                          <th>Status</th>
+                        </tr>
+                        <tr>
+                          <td>Peter</td>
+                          <td>Griffin</td>
+                          <td>$100</td>
+                          <td>Resolved</td>
+                        </tr>
+                        <tr>
+                          <td>Lois</td>
+                          <td>Griffin</td>
+                          <td>$150</td>
+                          <td>Draft</td>
+                        </tr>
+                        <tr>
+                          <td>Joe</td>
+                          <td>Swanson</td>
+                          <td>$300</td>
+                          <td>Rejected</td>
+                        </tr>
+                        <tr>
+                          <td>Cleveland</td>
+                          <td>Brown</td>
+                          <td>$250</td>
+                          <td>Investigation</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+          </div>
+          <div class="rightcolumn">
+            <div class="card">
+                <h2>DASHBOARD</h2>
+                <div class="card">
+                    <h4>Red Flag Incidents</h4>
+                    <p>{} - Resolved </p>
+                    <p>{} - Draft​​</p>
+                    <p>{} - Under investigation</p> 
+                    <p>{} - Rejected</p> 
+                </div> 
+                <div class="card">
+                    <h4>Intervention Incidents</h4>
+                    <p>{} - Resolved </p>
+                    <p>{} - Draft​​</p>
+                    <p>{} - Under investigation</p> 
+                    <p>{} - Rejected</p>
+                </div> 
+            </div>  
+          </div>
+        </div>
+        
+        <div class="footer">
+          <h2>Footer</h2>
+        </div>
+        
+    </body>
+</html>
+
+<script>
+        function myFunction() {
+          // Declare variables 
+          var input, filter, table, tr, td, i;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myIncidentsTable");
+          tr = table.getElementsByTagName("tr");
+        
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            } 
+          }
+        }
+</script>
+        
