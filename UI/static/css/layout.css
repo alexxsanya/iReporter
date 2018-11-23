@@ -9,16 +9,17 @@ body {
 	padding: 0 100px 0 100px;
 	margin-top: 0px;
 }
-/* Header/Blog Title */
+/* Header Title */
 .header {
     padding: 10px;
     text-align: center;
-    background: white; 
+    /*background: white;*/ 
+    background: rgba(214, 115, 91, 0.6392156862745098);
 }
 
 .header h1 {
     font-size: 50px;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 3px rgba(234, 230, 180, 0.6);
 }
 
 h1.title{
@@ -104,7 +105,25 @@ h1.title{
 .fakeimg {
     background-color: #aaa;
     width: 100%;
-    padding: 20px;
+    padding: 20px; 
+}
+
+/* Container for flexboxes */
+.row {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 10px;
+    margin:0 10px;
+    background-color: #aaa;
+    height: 120px; /* Should be removed. Only for demonstration */
 }
 
 /* Add a card effect for articles */
@@ -154,7 +173,7 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover{
     opacity: 1;
 }
 
-#myInput {
+#filterInput {
     background-image: url('../img/searchicon.png'); /* Add a search icon to input */
     background-position: 10px 12px; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
@@ -180,10 +199,18 @@ select {
     font-size: 16px;
     background-color: #f1f1f1;
 }
-
+select.status{
+    min-width:30%;
+    max-width: 50%;
+    padding: 4px 10px;
+    border-color: transparent;
+    border: 1px solid #333;
+    background-color: transparent;
+}
 select option{ 
     font-size: 16px;
 }
+
 textarea {
     width: 100%;
     height: 150px;
@@ -224,6 +251,7 @@ th {
 
 .pagination {
     display: inline-block;
+    margin-top:10px;
 }
 
 .pagination a {
@@ -232,7 +260,7 @@ th {
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color .3s;
-    border: 1px solid #ddd;
+    border: 1px solid #eee;
     margin: 0 4px;
 }
 
@@ -243,6 +271,46 @@ th {
 }
 
 .pagination a:hover:not(.active) {background-color: #ddd;}
+
+/*flag*/
+span.incident-rf{
+    color:#e45;
+    font-size:1.0rem;
+    padding:5px;
+    border-radius: 5%;
+    border:1px solid #ddd;
+}
+
+/*Modal Styling*/
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
 /* Footer */
 .footer {
