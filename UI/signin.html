@@ -18,7 +18,7 @@
         <div class="topnav">
             <a href="index.html">Home</a>
             <a href="create-record.html">Report</a>
-            <a href="profile.html">My Records</a>
+            <a href="profile.html">My Profile</a>
             <a href="signup.html" style="float:right">Register</a>
             <a href="signin.html" style="float:right">Login</a>
         </div>
@@ -32,12 +32,12 @@
                   <hr /><br/>
                     <form action="" class="test">
                       <label for="username">Username</label>
-                      <input type="text" id="username" name="username" placeholder="Your username or email.." autofocus>
+                      <input type="text" id="username" name="username" placeholder="Your username or email.." autofocus pattern="[A-Za-z]{5,15}" required>
                     
                       <label for="password">Password</label>
-                      <input type="password" id="password" name="password" placeholder="Your Password">
+                      <input type="password" id="password" name="password" placeholder="Your Password" pattern="[A-Za-z]{8,}" title="Title should be atleast 5 characters" required>
 
-                      <a href="#"><input type="button" value="LOGIN"/></a>                       
+                      <a href="#"><input type="submit" value="LOGIN"/></a>                       
                     </form>
                     </div>
              </div>
@@ -51,7 +51,8 @@
         </div>
         
         <div class="footer">
-          <h2>Footer</h2>
+            <h3>©2018 iReporter - Andela BootCamp CoHort 15</h3>
+            <h4>~ by alexxsanya@gmail.com</h4>
         </div>
         
         </body>
