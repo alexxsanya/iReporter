@@ -24,7 +24,7 @@
         <div class="row">
           <div class="leftcolumn">
             <div class="card">
-                <h2>REPORTED INCIDENT</h2>
+                <h2>ALL REPORTED INCIDENT</h2>
                 <p>Below is a list of all created incidents on i-reporter</p>
                 <hr /><br/>
                 <div class="table-display">
@@ -32,33 +32,33 @@
                     <table id="myIncidentsTable">
                         <tr>
                           <th>Created By</th>
-                          <th>Comment</th>
+                          <th>Title</th>
                           <th>Type</th>
-                          <th>Status</th>
+                          <th>Status</th> 
                         </tr>
                         <tr>
                           <td>Peter</td>
-                          <td><a href="#">Corrupt CAO in Wakiso District</a></td>
+                          <td><a href="view-record.html">Corrupt CAO in Wakiso District</a></td>
                           <td>Red Flag</td>
-                          <td>Resolved</td>
+                          <td>Resolved</td> 
                         </tr>
                         <tr>
                           <td>Alex</td>
                           <td>Deadly road pothole</td>
                           <td>Intervention</td>
-                          <td>Draft</td>
+                          <td>Draft</td> 
                         </tr>
                         <tr>
                           <td>Yoweli</td>
                           <td>Fallen Electirical Poles</td>
                           <td>Intervention</td>
-                          <td>Rejected</td>
+                          <td>Rejected</td> 
                         </tr>
                         <tr>
                           <td>Kyalenga</td>
                           <td>Corrupt Forest Officer</td>
                           <td>Intervention</td>
-                          <td>Investigation</td>
+                          <td>Investigation</td> 
                         </tr>
                     </table>
                     <div class="center">
@@ -70,35 +70,67 @@
                           <a href="#">4</a>
                           <a href="#">&raquo;</a>
                         </div>
-                    </div>
-                                          
+                    </div>                                     
                 </div>
             </div>
           </div>
           <div class="rightcolumn">
-            <div class="card">
-                <h2>DASHBOARD</h2>
                 <div class="card">
-                    <h4>Red Flag Incidents</h4>
-                    <p>{} - Resolved </p>
-                    <p>{} - Draft​​</p>
-                    <p>{} - Under investigation</p> 
-                    <p>{} - Rejected</p> 
-                </div> 
-                <div class="card">
-                    <h4>Intervention Incidents</h4>
-                    <p>{} - Resolved </p>
-                    <p>{} - Draft​​</p>
-                    <p>{} - Under investigation</p> 
-                    <p>{} - Rejected</p>
-                </div> 
-            </div>  
-          </div>
+                    <h2>DASHBOARD</h2>
+                    <div class="card">
+                        <h4>Red Flag Incidents</h4>
+                        <table>
+                            <tbody>
+                                <tr> 
+                                    <td>Resolved</td>
+                                    <td><i>134</i></td>
+                                </tr>
+                                <tr> 
+                                    <td>Draft​​</td>
+                                    <td><i>156</i></td>
+                                </tr>
+                                <tr> 
+                                    <td>Under investigation</td>
+                                    <td><i>150</i></td>
+                                </tr>
+                                <tr> 
+                                    <td>Rejected</td>
+                                    <td><i>45</i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> 
+                    <div class="card">
+                        <h4>Intervention Incidents</h4>
+                        <table>
+                                <tbody>
+                                    <tr> 
+                                        <td>Resolved</td>
+                                        <td><i>110</i></td>
+                                    </tr>
+                                    <tr> 
+                                        <td>Draft​​</td>
+                                        <td><i>15</i></td>
+                                    </tr>
+                                    <tr> 
+                                        <td>Under investigation</td>
+                                        <td><i>56</i></td>
+                                    </tr>
+                                    <tr> 
+                                        <td>Rejected</td>
+                                        <td><i>56</i></td>
+                                    </tr>
+                                </tbody>
+                        </table>
+                    </div> 
+                </div>  
+              </div>
         </div>
         
         <div class="footer">
-          <h2>Footer</h2>
-        </div>
+                <h3>©2018 iReporter - Andela BootCamp CoHort 15</h3>
+                <h4>~ by alexxsanya@gmail.com</h4>
+              </div>
         
     </body>
 </html>
@@ -106,7 +138,8 @@
 <script src="./static/js/ireporter.js"></script>
 <script>
     function filterThisTable(){
-        filterTable("myIncidentsTable","filterInput")
+        secondColumn = 1
+        filterTable("myIncidentsTable","filterInput",secondColumn)
     }
 </script>
         

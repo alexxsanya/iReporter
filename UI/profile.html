@@ -24,11 +24,11 @@
         <div class="row">
           <div class="leftcolumn">
             <div class="card">
-                <h2>REPORTED INCIDENTS</h2>
+                <h2>MY REPORTED INCIDENTS</h2>
                 <p>Below is a list of the reported incidents to ireport</p>
                 <hr /><br/>
                 <div class="table-display">
-                    <input type="text" id="filterInput" onkeyup="myFunction()" placeholder="Search for names..">
+                    <input type="text" id="filterInput" onkeyup="filterThisTable()" placeholder="Search by Comment..">
                     <table id="myIncidentsTable">
                         <tr>
                           <th>Created On</th>
@@ -38,9 +38,9 @@
                         </tr>
                         <tr>
                           <td>12-11-2018</td>
-                          <td><a href="#">Corrupt CAO in Wakiso District</a></td>
+                          <td><a href="view-record.html">Corrupt CAO in Wakiso District</a></td>
                           <td>Red Flag</td>
-                          <td>Resolved</td>
+                          <td>Investigation</td>
                         </tr>
                         <tr>
                           <td>19-11-2018</td>
@@ -57,15 +57,15 @@
                         <tr>
                           <td>23-11-2018</td>
                           <td>Corrupt Forest Officer</td>
-                          <td>Intervention</td>
-                          <td>Investigation</td>
+                          <td>Red Flag</td>
+                          <td>Resolved</td>
                         </tr>
                     </table>
                     <div class="center">
                         <div class="pagination">
                           <a href="#">&laquo;</a>
-                          <a href="#">1</a>
-                          <a href="#" class="active">2</a>
+                          <a href="#" class="active">1</a>
+                          <a href="#">2</a>
                           <a href="#">3</a>
                           <a href="#">4</a>
                           <a href="#">&raquo;</a>
@@ -79,24 +79,57 @@
                 <h2>DASHBOARD</h2>
                 <div class="card">
                     <h4>Red Flag Incidents</h4>
-                    <p>{} - Resolved </p>
-                    <p>{} - Draft​​</p>
-                    <p>{} - Under investigation</p> 
-                    <p>{} - Rejected</p> 
+                    <table>
+                        <tbody>
+                            <tr> 
+                                <td>Resolved</td>
+                                <td><i>10</i></td>
+                            </tr>
+                            <tr> 
+                                <td>Draft​​</td>
+                                <td><i>15</i></td>
+                            </tr>
+                            <tr> 
+                                <td>Under investigation</td>
+                                <td><i>0</i></td>
+                            </tr>
+                            <tr> 
+                                <td>Rejected</td>
+                                <td><i>02</i></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div> 
                 <div class="card">
                     <h4>Intervention Incidents</h4>
-                    <p>{} - Resolved </p>
-                    <p>{} - Draft​​</p>
-                    <p>{} - Under investigation</p> 
-                    <p>{} - Rejected</p>
+                    <table>
+                            <tbody>
+                                <tr> 
+                                    <td>Resolved</td>
+                                    <td><i>10</i></td>
+                                </tr>
+                                <tr> 
+                                    <td>Draft​​</td>
+                                    <td><i>15</i></td>
+                                </tr>
+                                <tr> 
+                                    <td>Under investigation</td>
+                                    <td><i>0</i></td>
+                                </tr>
+                                <tr> 
+                                    <td>Rejected</td>
+                                    <td><i>02</i></td>
+                                </tr>
+                            </tbody>
+                        </table>
                 </div> 
             </div>  
           </div>
         </div>
         
         <div class="footer">
-          <h2>Footer</h2>
+            <h3>©2018 iReporter - Andela BootCamp CoHort 15</h3>
+            <h4>~ by alexxsanya@gmail.com</h4>
         </div>
         
     </body>
@@ -104,7 +137,8 @@
 <script src="./static/js/ireporter.js"></script>
 <script>
     function filterThisTable(){
-        filterTable("myIncidentsTable","filterInput")
+        firstColumn = 1
+        filterTable("myIncidentsTable","filterInput",firstColumn)
     }
 </script>
         

@@ -281,6 +281,26 @@ span.incident-rf{
     border:1px solid #ddd;
 }
 
+.map{
+    height:400px;
+    width:100%;
+    margin:auto;
+    background-color: #eee;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden;    
+    background-color:rgba(0,0,0, 0.9);
+    padding-top: 50px;
+}
 /*Modal Styling*/
 .modal-content {
     background-color: #fefefe;
