@@ -16,7 +16,7 @@
         <div class="topnav">
             <a href="index.html">Home</a>
             <a href="create-record.html"> Report</a>
-            <a href="profile.html">My Records</a>
+            <a href="profile.html">My Profile</a>
             <a href="signup.html" style="float:right">Register</a>
             <a href="signin.html" style="float:right">Login</a>
         </div>
@@ -28,25 +28,31 @@
                     <h2>REPORT AN INCIDENT HERE</h2>
                     <p>Complete the form appropriately to report an incident</p>
                     <hr /><br/>
-                    <form action="" class="test">
+                    <form action="" class="test" method="POST">
                         <label for="incidentType">Incident Type</label>
                         <select id="incidentType" name="incidentType" autofocus>
                             <option></option>
                             <option value="redflag">Red Flag</option>
                             <option value="Intervention">Intervention</option> 
                         </select>
-                        
+
+                        <label for="incidentTitle">Incident Title</label>
+                        <input type="text" id="incidentTitle" name="incidentTitle" placeholder="Type Your Incident Title Here.." pattern="[A-Za-z]{5,15}" title="Title should be atleast 5 characters" required>
+
                         <label for="commentArea">Add a Comment</label>
                         <textarea name="commentArea">Type Your Comment Here... </textarea>
 
                         <label for="geoCode">Geolocation Codes</label>
-                        <input type="text" id="geoCode" name="geoCode" placeholder="Latitude, Longitude" disabled>
-                        <a href="#"><input type="button" value="PICK CODES" /></a> <br/><br>
+                        <input type="text" id="geoCode" name="geoCode" placeholder="Latitude, Longitude" readonly>
+                        <a href="#"><input type="button" onclick="pickCoordinates()" value="PICK CODES" /></a>
+                        <a href="#"><input type="button" onclick="document.getElementById('maps-modal').style.display='block'" value="PICK CODES" /></a>
+                        
+                        <br/><br>
 
                         <label for="attachImage">Attach Image</label>
-                        <input type="file" id="attachImage" name="attachImage" placeholder="Attach Images.."/>
-                        
-                        <a href="#"><input class="full" type="button" value="REGISTER"/></a>                       
+                        <input type="file" id="attachImage" name="attachImage" placeholder="Attach Images.." accept="image/*" multiple/>
+                       
+                        <input class="full" type="submit" value="REGISTER"/>                       
                     </form>
                     </div>
              </div>
@@ -60,9 +66,42 @@
         </div>
         
         <div class="footer">
-          <h2>Footer</h2>
+            <h3>©2018 iReporter - Andela BootCamp CoHort 15</h3>
+            <h4>~ by alexxsanya@gmail.com</h4>
         </div>
-        
-        </body>
-        </html>
-        
+        <div id="maps-modal" class="modal">
+            <span onclick="document.getElementById('maps-modal').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <div class="modal-content">
+                <div class="leftcolumn">
+                    <div class="card">
+                        Pick the Address of Where the Incident Occured
+                        <div class="map">
+
+                        </div>                        
+                    </div>
+                </div>
+                <div class="rightcolumn">
+                    <div class="card"> 
+                        <div class="card">
+                            <h4>Red Flag Incidents</h4>
+                        </div>
+                    </div>  
+                </div>
+
+            </div>
+        </div>        
+    </body>
+</html>
+
+<script src="./static/js/ireporter.js"></script>
+<script>
+    // Get the Maps Modal so as to pick the incidents coordinates
+    var modal = document.getElementById('maps-modal');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
