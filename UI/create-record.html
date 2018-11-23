@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <title>i-Reporter</title>
@@ -45,8 +46,8 @@
 
                         <label for="geoCode">Geolocation Codes</label>
                         <input type="text" id="geoCode" name="geoCode" placeholder="Latitude, Longitude" readonly>
-                        <a href="#"><input type="button" onclick="pickCoordinates()" value="PICK CODES" /></a>
-                        <a href="#"><input type="button" onclick="document.getElementById('maps-modal').style.display='block'" value="PICK CODES" /></a>
+                        <a href="#"><input type="button" onclick="pickCoordinates()" value="Pick Current Location" /></a>
+                        <a href="#"><input type="button" onclick="document.getElementById('maps-modal').style.display='block'" value="Locate From Map" /></a>
                         
                         <br/><br>
 
@@ -75,7 +76,7 @@
             <div class="modal-content">
                 <div class="leftcolumn">
                     <div class="card">
-                        <h2>Pick the Address of Where the Incident Occured</h2>
+                        Pick the Address of Where the Incident Occured
                         <div class="map" id="mapCanvas">
 
                         </div>                        
