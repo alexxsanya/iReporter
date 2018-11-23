@@ -74,19 +74,25 @@
             <div class="modal-content">
                 <div class="leftcolumn">
                     <div class="card">
-                        Pick the Address of Where the Incident Occured
-                        <div class="map">
+                        <h2>Pick the Address of Where the Incident Occured</h2>
+                        <div class="map" id="mapCanvas">
 
                         </div>                        
                     </div>
                 </div>
                 <div class="rightcolumn">
-                    <div class="card"> 
+                    <div class="card">  
                         <div class="card">
-                            </h4>Selected Incident Location</h4>
-                            <p>Latitude - </p>
-                            <p>Longitude - </p>
+                            <div id="infoPanel">
+                                <b>Marker status:</b>
+                                <div id="markerStatus"><i>Click and Drag the Marker.</i></div>
+                                <b>Incident Location:</b>
+                                <div id="info"></div>
+                                <b>Closest matching address:</b>
+                                <div id="address"></div>
+                              </div>
                         </div>
+                        <input type="button" value="SET ADDRESS"/>
                     </div>  
                 </div>
 
@@ -96,6 +102,8 @@
 </html>
 
 <script src="./static/js/ireporter.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7g68KcjjZ3nGcT0Jcjo6nWPXfITNVStA"  type="text/javascript"></script>
+<script src="./static/js/map.js"></script>
 <script>
     // Get the Maps Modal so as to pick the incidents coordinates
     var modal = document.getElementById('maps-modal');
@@ -106,4 +114,9 @@
             modal.style.display = "none";
         }
     }
-    </script>
+
+    window.onload = function(){
+        console.log(pickCoordinates())
+        initialize()
+    } 
+</script>
