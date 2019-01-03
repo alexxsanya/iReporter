@@ -46,8 +46,8 @@
 
                         <label for="geoCode">Geolocation Codes</label>
                         <input type="text" id="geoCode" name="geoCode" placeholder="Latitude, Longitude" readonly>
-                        <a href="#"><input type="button" onclick="pickCoordinates()" value="Pick Current Location" /></a>
-                        <a href="#"><input type="button" onclick="document.getElementById('maps-modal').style.display='block'" value="Locate From Map" /></a>
+                        <input type="button" onclick="pickCoordinates()" value="Pick Current Location" />
+                        <input type="button" onclick="document.getElementById('maps-modal').style.display='block'" value="Locate From Map" />
                         
                         <br/><br>
 
@@ -78,7 +78,7 @@
                     <div class="card">
                         Pick the Address of Where the Incident Occured
                         <div class="map" id="mapCanvas">
-
+                            <p> Loading .... </p>
                         </div>                        
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                                 <div id="address"></div>
                               </div>
                         </div>
-                        <input type="button" value="SET ADDRESS"/>
+                        <input type="button" onclick="pickCoordFromMap()" value="SET ADDRESS"/>
                     </div>  
                 </div>
 
