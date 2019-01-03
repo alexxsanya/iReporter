@@ -76,7 +76,8 @@ h1.title{
 }
 .landing input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover{
     /**border-left: 2px solid #ddd;
-    border-right: 2px solid #ddd;**/
+    border-right: 2px solid #ddd;**/ 
+    background-color:#78cc7b
 }
 
 /*full column */
@@ -287,7 +288,13 @@ span.incident-rf{
     margin:auto;
     background-color: #eee;
 }
+.map p{
+    position:relative;
+    top:45%;
+    left:45%;
+    color:#333;
 
+}
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
