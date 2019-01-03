@@ -75,8 +75,8 @@ h1.title{
     cursor: pointer;
 }
 .landing input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover{
-    border-left: 2px solid #ddd;
-    border-right: 2px solid #ddd;
+    /**border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;**/
 }
 
 /*full column */
@@ -168,9 +168,9 @@ input[type=button], input[type=submit], input[type=reset] {
     cursor: pointer;
 }
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover{
-    border-left: 2px solid #ddd;
-    border-right: 2px solid #ddd;
-    opacity: 1;
+    /*border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;*/
+    background-color:#78cc7b
 }
 
 #filterInput {
