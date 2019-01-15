@@ -46,3 +46,19 @@ function pickCoordinates() {
   navigator.geolocation.getCurrentPosition(success, error);
   
 }
+
+function pickCoordFromMap(){
+  var output = document.getElementById("geoCode");
+
+  coordinates = document.getElementById('address').innerHTML
+
+  if(coordinates != ""){
+    output.value = coordinates
+  }else{
+    output.value = "No coordinates set for this incident, Try Again"
+    console.log("No coordinates set for this incident")
+  }
+  //close the mode after all is done
+  document.getElementById('maps-modal').style.display='none'
+
+}

@@ -31,7 +31,7 @@ function geocodePosition(pos) {
   function initialize() { 
     var latLng = new google.maps.LatLng(0.347596,32.582520); 
     var map = new google.maps.Map(document.getElementById('mapCanvas'), {
-      zoom: 8,
+      zoom: 15,
       center: latLng,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
