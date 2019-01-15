@@ -8,7 +8,7 @@ Corruption is a huge bane to Africa’s development. African countries must deve
 
 ![Screenshot of Reports Page](./layout/report.PNG?raw=true "Reports Page")
 
-![Screenshot of Incident Deta page](./stuff/screenshots/incident.png?raw=true "Incidents Page")
+![Screenshot of Incident Deta page](./layout/incident.png?raw=true "Incidents Page")
 
 
 
