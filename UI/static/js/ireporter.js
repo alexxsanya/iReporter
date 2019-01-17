@@ -50,7 +50,7 @@ function pickCoordinates() {
 function pickCoordFromMap(){
   var output = document.getElementById("geoCode");
 
-  coordinates = document.getElementById('address').innerHTML
+  coordinates = document.getElementById('info').innerHTML
 
   if(coordinates != ""){
     output.value = coordinates
