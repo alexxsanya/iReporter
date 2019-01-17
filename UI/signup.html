@@ -32,27 +32,27 @@
                     <hr /><br/>
                     <form action="" class="test">
                       <label for="fname">First Name</label>
-                      <input type="text" id="fname" name="firstname" placeholder="Your name.." autofocus>
+                      <input type="text" id="fname" name="firstname" placeholder="Your name.." autofocus pattern="[A-Za-z]{3,15}" required>
                     
                       <label for="lname">Last Name</label>
-                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name.." pattern="[A-Za-z]{3,15}" required>
 
                       <label for="oname">Other Name</label>
-                      <input type="text" id="oname" name="othername" placeholder="Your other name..">
+                      <input type="text" id="oname" name="othername" placeholder="Your other name.." pattern="[A-Za-z]{3,15}" required>
 
                       <label for="uemail">Email Address</label>
-                      <input type="email" id="uemail" name="uemail" placeholder="Your Email Address..">
+                      <input type="email" id="uemail" name="uemail" placeholder="Your Email Address.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
 
                       <label for="pnumber">Phone Number</label>
-                      <input type="text" id="pnumber" name="pnumber" placeholder="Your Email Address..">
+                      <input type="text" id="pnumber" name="pnumber" placeholder="Your Phone Number.. as 2567..." pattern="2567[0-9]{8}" required>
 
                       <label for="pusername">Preferred Username</label>
-                      <input type="text" id="pusername" name="pusername" placeholder="Your Preferred Username..">
+                      <input type="text" id="pusername" name="pusername" placeholder="Your Preferred Username.." pattern="[A-Za-z0-9]{8,15}">
 
                       <label for="password">Preferred Password</label>
-                      <input type="password" id="password" name="password" placeholder="Your Preferred Password..">
+                      <input type="password" id="password" name="password" placeholder="Your Preferred Password.." pattern="[A-Za-z0-9]{8,15}">
 
-                      <a href="#"><input type="button" value="REGISTER"/></a>                       
+                       <input type="submit" value="REGISTER"/>                     
                     </form>
                     </div>
              </div>

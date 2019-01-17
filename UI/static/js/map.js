@@ -18,9 +18,11 @@ function geocodePosition(pos) {
   }
   
   function updateMarkerPosition(latLng) {
+    var lat =   latLng.lat().toString();
+    var lng = latLng.lng().toString(); 
     document.getElementById('info').innerHTML = [
-      latLng.lat(),
-      latLng.lng()
+      lat.substr(0, 10),
+      lng.substr(0, 10)
     ].join(', ');
   }
   
@@ -29,7 +31,7 @@ function geocodePosition(pos) {
   }
 
   function initialize() { 
-    var latLng = new google.maps.LatLng(0.347596,32.582520); 
+    var latLng = new google.maps.LatLng(0.347596655,32.582520); 
     var map = new google.maps.Map(document.getElementById('mapCanvas'), {
       zoom: 15,
       center: latLng,
